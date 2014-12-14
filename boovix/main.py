@@ -6,15 +6,17 @@
 """Main module"""
 
 import wx
+
+# Pylint tests:
 # import asd.xyz
+# asd.xyz.Frame(None, -1, "Hello World")
+# asd.xyz.Frame2(None, -1, "Hello World")
 
 
 def main():
     """Main function"""
     app = wx.App()
     frame = wx.Frame(None, -1, "Hello World")
-    asd.xyz.Frame(None, -1, "Hello World")
-    # asd.xyz.Frame2(None, -1, "Hello World")
     frame.Show()
     app.MainLoop()
 

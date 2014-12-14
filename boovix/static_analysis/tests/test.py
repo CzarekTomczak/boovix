@@ -6,10 +6,12 @@
 import os
 import test2
 
-# pep8 requires two blank lines above.
+# pep8 requires two blank lines after imports.
+
+
 def test():
     ''' This is test function. Docstring required by pylint. '''
-    asd() # Wrong indentation
+    asd()
     fgh = xyz
 
 if __name__ == "__main__":

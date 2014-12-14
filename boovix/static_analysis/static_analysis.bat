@@ -1,5 +1,11 @@
 cd %~dp0..\
 
+@rem ------------------------- autopep8 ---------------------------------------
+@rem To remove trailing whitespace. VS2013 does not have such option.
+
+autopep8 --in-place --recursive .
+
+@rem --------------------------------------------------------------------------
 
 @rem -------------------------- pylint ----------------------------------------
 @rem pylint [options] module_or_package

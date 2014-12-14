@@ -11,3 +11,4 @@
        https://bitbucket.org/logilab/pylint/issue/413/
 5. pip install pep8
 6. pip install mypy-lang
+7. pip install autopep8
