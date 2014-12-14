@@ -1,0 +1,17 @@
+# When using "disable=no-memeber" it will throw a warning that we disabled it.
+# frame = wx.Frame(None, -1, "Hello World") # pylint: disable=no-member
+# Locally disabling no-member (E1101) (locally-disabled)
+
+[MESSAGES CONTROL]
+
+disable=locally-disabled
+
+[BASIC]
+
+# Good variable names which should always be accepted, separated by a comma
+# good-names=i,j,k,ex,Run,_
+
+[TYPECHECK]
+
+ignored-modules=
+dynamic-modules=wx,asd.xyz

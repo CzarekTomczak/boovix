@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>4abf4526-e6ed-4ec6-a724-b0584baaa5db</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Boovix</Name>
+    <RootNamespace>Boovix</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="asd\xyz\abc.py" />
+    <Compile Include="asd\xyz\__init__.py" />
+    <Compile Include="asd\__init__.py" />
+    <Compile Include="main.py" />
+    <Compile Include="static_analysis\tests\test.py" />
+    <Compile Include="static_analysis\tests\test2.py" />
+    <Compile Include="utils\static_types.py" />
+    <Compile Include="utils\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="asd\" />
+    <Folder Include="asd\xyz\" />
+    <Folder Include="asd\xyz\__pycache__\" />
+    <Folder Include="asd\__pycache__\" />
+    <Folder Include="scanner\" />
+    <Folder Include="scanner\movie_files_stop_words\" />
+    <Folder Include="scanner\tests\" />
+    <Folder Include="schema\" />
+    <Folder Include="static_analysis\" />
+    <Folder Include="static_analysis\tests\" />
+    <Folder Include="utils\" />
+    <Folder Include="utils\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="asd\xyz\__pycache__\abc.cpython-34.pyc" />
+    <Content Include="asd\xyz\__pycache__\__init__.cpython-34.pyc" />
+    <Content Include="asd\__pycache__\__init__.cpython-34.pyc" />
+    <Content Include="scanner\movie_files_stop_words\language" />
+    <Content Include="scanner\movie_files_stop_words\pirated_movie_release_types" />
+    <Content Include="scanner\movie_files_stop_words\tv_series" />
+    <Content Include="schema\movie_files.sql" />
+    <Content Include="schema\movie_information.sql" />
+    <Content Include="static_analysis\.pylintrc" />
+    <Content Include="static_analysis\.pylintrc_default" />
+    <Content Include="static_analysis\pylint_1.4.0_dynamic_modules.patch" />
+    <Content Include="static_analysis\static_analysis.bat" />
+    <Content Include="static_analysis\tests\mypy_.bat" />
+    <Content Include="static_analysis\tests\pep8_.bat" />
+    <Content Include="static_analysis\tests\pyflakes_.bat" />
+    <Content Include="static_analysis\tests\pylint_.bat" />
+    <Content Include="static_analysis\tests\README" />
+    <Content Include="utils\__pycache__\static_types.cpython-34.pyc" />
+    <Content Include="utils\__pycache__\__init__.cpython-34.pyc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

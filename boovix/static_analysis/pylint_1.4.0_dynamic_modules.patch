@@ -1,0 +1,74 @@
+diff -r 9365b042c352 checkers/typecheck.py
+--- a/checkers/typecheck.py Sat Dec 06 13:41:43 2014 +0200
++++ b/checkers/typecheck.py Sun Dec 14 19:27:35 2014 +0100
+@@ -149,6 +149,13 @@
+ manipulated during runtime and thus existing member attributes cannot be \
+ deduced by static analysis'},
+                ),
++               ('dynamic-modules',
++                {'default': (),
++                 'type': 'csv',
++                 'metavar': '<module names>',
++                 'help': 'List of module names for which member attributes \
++should be checked dynamically during runtime'},
++               ),
+                ('ignored-classes',
+                 {'default' : ('SQLObject',),
+                  'type' : 'csv',
+@@ -278,11 +285,56 @@
+                     continue
+                 done.add(actual)
+                 confidence = INFERENCE if not inference_failure else INFERENCE_FAILURE
++                if self.visit_getattr_dynamic(name, node.attrname):
++                    continue
+                 self.add_message('no-member', node=node,
+                                  args=(owner.display_type(), name,
+                                        node.attrname),
+                                  confidence=confidence)
+
++    def visit_getattr_dynamic(self, module_name, attr_name):
++        """check dynamically that the accessed attribute exists by
++        loading the module if it's listed in "dynamic-modules" option
++        """
++        import importlib
++        import sys
++        import os
++        from pylint.utils import get_global_option
++        dynamic_modules = get_global_option(self, 'dynamic-modules',
++                                            default=[])
++        if not module_name in dynamic_modules:
++            return False
++        module = None
++        try:
++            # This will only import modules from /lib/site-packages/
++            module = importlib.import_module(module_name)
++        except ImportError:
++            # This can import a local module from the location where
++            # pylint tool was originally executed.
++            path_to_package = sys.path[0]+os.path.sep+(module_name.replace(
++                    ".", os.path.sep))+os.path.sep+"__init__.py"
++            path_to_module = sys.path[0]+os.path.sep+(module_name.replace(
++                    ".", os.path.sep))+".py"
++            if sys.version_info >= (3,3):
++                import importlib.machinery
++                if os.path.exists(path_to_package):
++                    loader = importlib.machinery.SourceFileLoader(module_name,
++                            path_to_package)
++                    module = loader.load_module()
++                elif os.path.exists(path_to_module):
++                    loader = importlib.machinery.SourceFileLoader(module_name,
++                            path_to_module)
++                    module = loader.load_module()
++            else:
++                import imp
++                if os.path.exists(path_to_package):
++                    module = imp.load_source(module_name, path_to_package)
++                elif os.path.exists(path_to_module):
++                    module = imp.load_source(module_name, path_to_module)
++        if module and attr_name in dir(module):
++            return True
++        return False
++
+     @check_messages('assignment-from-no-return', 'assignment-from-none')
+     def visit_assign(self, node):
+         """check that if assigning to a function call, the function is

@@ -1,0 +1,7 @@
+pylint seems to be the best tool.
+pep8 may be an addition to check code style.
+pyflakes gives poor results, avoid.
+PyChecker compiles the module so this may be troublesome, avoid.
+
+For pylint ignoring useless warnings see:
+http://stackoverflow.com/questions/35470/are-there-any-static-analysis-tools-for-python

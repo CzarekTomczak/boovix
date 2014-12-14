@@ -1,0 +1,8 @@
+# See https://en.wikipedia.org/wiki/Pirated_movie_release_types
+bluray
+brrip
+dvdrip
+/m\-\d+[pi]/ # m-1080p
+/mini\s*\d+[pi]/ # mini 1080p
+/\d+[pi]/ # 1080p, 1080i
+/R\d+/ # Regions: R0, R1, etc.

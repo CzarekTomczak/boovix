@@ -1,0 +1,6 @@
+/(?:season|seaso|seas|sea|se|s)\s*(\d+)\s*(?:episode|episod|episo|epis|epi|ep|e)(\d+)/
+/(?:season|seaso|seas|sea|se|s)\s*(\d+)/
+/(?:episode|episod|episo|epis|epi|ep|e)(\d+)/
+complete season
+season
+episode
