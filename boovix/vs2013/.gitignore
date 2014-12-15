@@ -1,2 +1,3 @@
-/*.suo
-/*.pyproj.user
+*.suo
+*.pyproj.user
+*.pyperf
