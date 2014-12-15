@@ -31,8 +31,6 @@
   <ItemGroup>
     <Folder Include="asd\" />
     <Folder Include="asd\xyz\" />
-    <Folder Include="asd\xyz\__pycache__\" />
-    <Folder Include="asd\__pycache__\" />
     <Folder Include="scanner\" />
     <Folder Include="scanner\movie_files_stop_words\" />
     <Folder Include="scanner\tests\" />
@@ -40,13 +38,9 @@
     <Folder Include="static_analysis\" />
     <Folder Include="static_analysis\tests\" />
     <Folder Include="utils\" />
-    <Folder Include="utils\__pycache__\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="asd\xyz\__pycache__\abc.cpython-34.pyc" />
-    <Content Include="asd\xyz\__pycache__\__init__.cpython-34.pyc" />
-    <Content Include="asd\__pycache__\__init__.cpython-34.pyc" />
     <Content Include="BUILD.md" />
     <Content Include="console.bat" />
     <Content Include="run.bat" />
@@ -64,8 +58,6 @@
     <Content Include="static_analysis\tests\pyflakes_.bat" />
     <Content Include="static_analysis\tests\pylint_.bat" />
     <Content Include="static_analysis\tests\README" />
-    <Content Include="utils\__pycache__\static_types.cpython-34.pyc" />
-    <Content Include="utils\__pycache__\__init__.cpython-34.pyc" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="asd\xyz\abc.py" />
