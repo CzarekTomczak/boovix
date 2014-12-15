@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>e482de90-c5d6-4a8f-881d-68b85ebb76da</TargetProject>
+    <FriendlyName>Boovix</FriendlyName>
+  </ProjectTarget>
+</ProfilingTarget>

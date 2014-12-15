@@ -9,6 +9,7 @@ import wx
 
 # Pylint tests:
 # import asd.xyz
+# from wx.core import * # no-name-in-module
 # asd.xyz.Frame(None, -1, "Hello World")
 # asd.xyz.Frame2(None, -1, "Hello World")
 

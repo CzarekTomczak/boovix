@@ -8,7 +8,7 @@
     <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
-    <WorkingDirectory>..\</WorkingDirectory>
+    <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Boovix</Name>
     <RootNamespace>Boovix</RootNamespace>
@@ -35,6 +35,8 @@
     <Folder Include="scanner\movie_files_stop_words\" />
     <Folder Include="scanner\tests\" />
     <Folder Include="schema\" />
+    <Folder Include="scrapers\" />
+    <Folder Include="scrapers\tests\" />
     <Folder Include="static_analysis\" />
     <Folder Include="static_analysis\tests\" />
     <Folder Include="utils\" />
@@ -52,7 +54,6 @@
     <Content Include="static_analysis\.pylintrc" />
     <Content Include="static_analysis\.pylintrc_default" />
     <Content Include="static_analysis\pylint_1.4.0_dynamic_modules.patch" />
-    <Content Include="static_analysis\static_analysis.bat" />
     <Content Include="static_analysis\tests\mypy_.bat" />
     <Content Include="static_analysis\tests\pep8_.bat" />
     <Content Include="static_analysis\tests\pyflakes_.bat" />
@@ -64,6 +65,7 @@
     <Compile Include="asd\xyz\__init__.py" />
     <Compile Include="asd\__init__.py" />
     <Compile Include="main.py" />
+    <Compile Include="scrapers\tests\imdb.py" />
     <Compile Include="static_analysis\tests\test.py" />
     <Compile Include="static_analysis\tests\test2.py" />
     <Compile Include="utils\static_types.py" />
