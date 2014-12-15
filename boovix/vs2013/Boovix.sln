@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Boovix", "Boovix.pyproj", "{4ABF4526-E6ED-4EC6-A724-B0584BAAA5DB}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Boovix", "Boovix.pyproj", "{E482DE90-C5D6-4A8F-881D-68B85EBB76DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,8 +11,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4ABF4526-E6ED-4EC6-A724-B0584BAAA5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4ABF4526-E6ED-4EC6-A724-B0584BAAA5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E482DE90-C5D6-4A8F-881D-68B85EBB76DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E482DE90-C5D6-4A8F-881D-68B85EBB76DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
