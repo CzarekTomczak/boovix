@@ -35,8 +35,8 @@ def main():
 def static_analysis():
     """ Static analysis: autopep8, pylint, pep8 """
     # autopep8() - disabled, see docstring for module.
-    pylint()
     pep8()
+    pylint()
 
 
 def check_output(command):
